@@ -20,9 +20,14 @@ module.exports = {
                     ]
                 }
             }
+        }, {
+            test: /\.svg$/,
+            loader: 'svg-inline-loader'
         }]
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
     ]
 }
